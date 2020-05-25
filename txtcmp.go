@@ -6,21 +6,17 @@ import (
        "os"
 )
 
-/*
-type Container interface {
-     
-}
-*/
-
 func main() {
      if len(os.Args) > 1 && (os.Args[1] == "-h" || os.Args[1] == "--help") {
-	fmt.Println("Usage: txtcmp [OPTION]... DOC_1_FILEPATH DOC_2_FILEPATH")  
+	fmt.Println("Usage: txtcmp DOC_1_FILEPATH DOC_2_FILEPATH")
+	fmt.Println("  Text file similarity is computed as the percentage of words")
+	fmt.Println("  in the shorter text file found in the longer text file")
      	return
      }
 
      if len(os.Args) < 3 {
      	fmt.Println("txtcmp: missing file operands")
-	fmt.Println("Usage: txtcmp [OPTION]... DOC_1_FILEPATH DOC_2_FILEPATH")  
+	fmt.Println("Usage: txtcmp DOC_1_FILEPATH DOC_2_FILEPATH")  
      	return
      }
 
